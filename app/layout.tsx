@@ -1,6 +1,5 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
-import { FormModalProvider } from '@/context/FormModalContext';
 
 export const viewport: Viewport = {
   colorScheme: 'dark light',
@@ -8,9 +7,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: 'CodeistaAI — Make your next move with Python',
+  title: 'CodeistaAI — Lead Management Dashboard',
   description:
-    'Explore a proposed Python learning journey from fundamentals to practical projects. CodeistaAI standalone UI prototype.',
+    'Real-time lead enquiries and attribution intelligence dashboard for CodeistaAI.',
   robots: {
     index: false,
     follow: false,
@@ -27,9 +26,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <FormModalProvider>{children}</FormModalProvider>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }
